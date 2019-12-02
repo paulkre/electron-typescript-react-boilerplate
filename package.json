@@ -1,0 +1,48 @@
+{
+  "name": "electron-typescript-react-boilerplate",
+  "version": "0.1.0",
+  "description": "A starting point for developing electron apps with typescript and react",
+  "main": "build/main.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "start": "npm run build && npm run electron",
+    "pack": "npm run build -- --mode production && electron-builder",
+    "build": "webpack --config webpack.electron.js",
+    "electron": "electron build/main.js",
+    "build:web": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulkre/electron-typescript-react-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "Paul Kretschel <paul.kretschel@icloud.com> (https://paulkre.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulkre/electron-typescript-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/paulkre/electron-typescript-react-boilerplate#readme",
+  "build": {
+    "appId": "com.paulkretschel.first-electron-app",
+    "files": [
+      "build/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "electron": "^7.1.2",
+    "electron-builder": "^21.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
